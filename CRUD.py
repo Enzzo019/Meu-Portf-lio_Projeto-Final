@@ -1,34 +1,12 @@
-'''
-Implementar a opção 2 (procurar contato) da seguinte forma:
-Ficar pedindo para digitar um nome até digitar um nome que existe;
-mostrar então na tela TODOS os demais dados daquela pessoa, cujo
-nome foi digitado.
 
-Implementar a opção 3 (atualizar contato) da seguinte forma:
-Ficar mostrando um menu oferecendo as opções de atualizar aniversário, ou
-endereco, ou telefone, ou celular, ou email, ou finalizar as
-atualizações; ficar pedindo para digitar a opção até digitar uma
-opção válida; realizar a atulização solicitada; até ser escolhida a
-opção de finalizar as atualizações.
-
-Implementar a opção 4 (listar contato) da seguinte forma:
-Mostrar na tela os TODOS os dados de CADA um dos contatos presentes
-na lista chamada agenda (eventualmente chamada de agd).
-
-Implementar nas novas opções, BEM COMO nas já implementadas, todas as
-validações cabíveis.
-
-Entregar até sexta, dia 05 de maio de 2025, na forma de demonstração
-para o professor.
-'''
 def apresenteSe ():
     print('+-------------------------------------------------------------+')
     print('|                                                             |')
     print('| AGENDA PESSOAL DE ANIVERSÁRIOS E FORMAS DE CONTATAR PESSOAS |')
     print('|                                                             |')
-    print('| Discentes: Camila 25317, Enzzo 25698, Vitória 25573         |')
+    print('| Discentes:Enzzo                                             |')
     print('|                                                             |')
-    print('| Versão 2.0 de 29 de abril de 2025                           |')
+    print('|                                                             |')
     print('|                                                             |')
     print('+-------------------------------------------------------------+')
     
@@ -59,14 +37,7 @@ def opcaoEscolhida (mnu):
     print()
     return umTexto('Qual é a sua opção? ', 'Opção inválida', opcoesValidas)
 
-'''
-procura nom em agd e, se achou, retorna:
-uma lista contendo True e a posicao onde achou;
-MAS, se não achou, retorna:
-uma lista contendo False e a posição onde inserir,
-aquilo que foi buscado, mas nao foi encontrado,
-mantendo a ordenação da lista.
-'''
+
 def ondeEsta (nom,agd):
     inicio=0
     final =len(agd)-1
@@ -130,10 +101,6 @@ def procurar (agd):
         else:
             print("Nome não encontrado. Tente novamente.")
 
-    # Ficar pedindo para digitar um nome até digitar um nome que existe
-    # cadastrado;
-    # mostrar então na tela TODOS os demais dados encontrados 
-    # sobre aquela pessoa.
 
 def atualizar (agd):
     digitouDireito = False
@@ -167,12 +134,6 @@ def atualizar (agd):
         else:
             print("Atualizações finalizadas!")
             break
-    # Ficar mostrando um SUBMENU oferecendo as opções de atualizar aniversário, ou
-    # endereco, ou telefone, ou celular, ou email, ou finalizar as
-    # atualizações; ficar pedindo para digitar a opção até digitar uma
-    # opção válida; realizar a atulização solicitada; até ser escolhida a
-    # opção de finalizar as atualizações.
-    # USAR A FUNÇÃO opcaoEscolhida, JÁ IMPLEMENTADA, PARA FAZER O MENU
 
 def listar (agd):
     if len(agd)==0:
@@ -190,11 +151,7 @@ def listar (agd):
             print(agd[posicao][5])
             print()
             posicao+=1
-    # implementar aqui a listagem de todos os dados de todos
-    # os contatos cadastrados
-    # printar aviso de que não há contatos cadastrados se
-    # esse for o caso
-
+   
 def excluir (agd):
     print()
     
@@ -297,10 +254,6 @@ def verificarAniversario(solicitacao):
         else:
             print('Data inválida; tente novamente!')
 
-# daqui para cima, definimos subprogramas (ou módulos, é a mesma coisa)
-# daqui para baixo, implementamos o programa
-# (nosso CRUD, C=create(cadastrar), R=read(recuperar),
-# U=update(atualizar), D=delete(remover,apagar)
 
 apresenteSe()
 
